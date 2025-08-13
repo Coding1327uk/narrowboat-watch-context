@@ -1,0 +1,32 @@
+﻿name: Validate Context (Schemas & OpenAPI)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install validators
+        run: |
+          npm i -g ajv-cli@5 swagger-cli@4
+
+      - name: Validate JSON Schemas (compile)
+        run: |
+          ajv compile -c ajv-formats -s "context/10-db/schemas/*.json"
+
+      - name: Validate OpenAPI specs
+        run: |
+          swagger-cli validate context/20-api/mobile.openapi.yaml
+          swagger-cli validate context/20-api/admin.openapi.yaml

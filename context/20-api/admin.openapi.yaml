@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: Narrowboat Watch Admin API
+  version: 0.2.0
+paths:
+  /groups:
+    get:
+      summary: List groups (with hierarchy filters)
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create group
+      responses:
+        '201':
+          description: Created
+  /boats:
+    post:
+      summary: Create boat
+      responses:
+        '201':
+          description: Created
+  /sensors:
+    post:
+      summary: Register sensor
+      responses:
+        '201':
+          description: Created
+  /alerts:
+    get:
+      summary: List alert rules
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create alert rule
+      responses:
+        '201':
+          description: Created

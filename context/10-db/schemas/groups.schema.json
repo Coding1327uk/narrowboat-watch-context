@@ -1,0 +1,41 @@
+{
+  "$id": "schemas/groups.schema.json",
+  "type": "object",
+  "required": [
+    "name",
+    "level",
+    "groupType"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parentId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "groupType": {
+      "type": "string",
+      "enum": [
+        "marina",
+        "basin",
+        "jetty",
+        "custom"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

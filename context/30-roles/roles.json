@@ -1,0 +1,23 @@
+{
+  "roles": [
+    {
+      "roleType": "SuperUser",
+      "scope": "all"
+    },
+    {
+      "roleType": "GroupAdmin",
+      "scope": "groupIds[]",
+      "cascade": "children"
+    },
+    {
+      "roleType": "Watchkeeper",
+      "scope": "groupIds[]",
+      "cascade": "children"
+    },
+    {
+      "roleType": "Owner",
+      "scope": "boatIds[]"
+    }
+  ],
+  "notes": "Group-scoped roles cascade to all child groups."
+}

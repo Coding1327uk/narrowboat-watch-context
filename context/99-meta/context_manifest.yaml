@@ -1,0 +1,25 @@
+files:
+  - { id: overview.system, path: context/00-overview/system_overview.md, version: 0.2.0 }
+  - { id: meta.glossary, path: context/00-overview/glossary.md, version: 0.2.0 }
+  - { id: db.overview, path: context/10-db/db_overview.md, version: 0.2.0 }
+  - { id: db.groups, path: context/10-db/groups.md, version: 0.2.0 }
+  - { id: db.boats, path: context/10-db/boats.md, version: 0.2.0 }
+  - { id: db.sensors, path: context/10-db/sensors.md, version: 0.2.0 }
+  - { id: db.users_roles, path: context/10-db/users_roles.md, version: 0.2.0 }
+  - { id: db.alerts, path: context/10-db/alerts.md, version: 0.2.0 }
+  - { id: api.overview, path: context/20-api/api_overview.md, version: 0.2.0 }
+  - { id: api.mobile, path: context/20-api/mobile.openapi.yaml, version: 0.2.0 }
+  - { id: api.admin, path: context/20-api/admin.openapi.yaml, version: 0.2.0 }
+  - { id: roles.permissions, path: context/30-roles/roles_permissions.md, version: 0.2.0 }
+  - { id: ui.nav_flow, path: context/40-ui/nav_flow.md, version: 0.2.0 }
+  - { id: ui.screen.dashboard, path: context/40-ui/screens/dashboard.md, version: 0.2.0 }
+  - { id: ui.screen.boat_detail, path: context/40-ui/screens/boat_detail.md, version: 0.2.0 }
+  - { id: ui.screen.alerts, path: context/40-ui/screens/alerts.md, version: 0.2.0 }
+  - { id: adr.0001, path: context/50-decisions/adr-0001-record-roles-model.md, version: 0.2.0 }
+  - { id: adr.0002, path: context/50-decisions/adr-0002-firestore-vs-sql.md, version: 0.2.0 }
+  - { id: alerts.overview, path: context/70-alerts/alerts_overview.md, version: 0.2.0 }
+  - { id: alerts.catalog, path: context/70-alerts/rule_catalog.md, version: 0.2.0 }
+  - { id: telemetry.overview, path: context/80-telemetry/telemetry_overview.md, version: 0.2.0 }
+  - { id: telemetry.decoders, path: context/80-telemetry/decoders.md, version: 0.2.0 }
+  - { id: rules.firestore, path: context/60-rules/firestore.rules, version: 0.2.0 }
+  - { id: indexes.firestore, path: context/60-rules/firestore.indexes.json, version: 0.2.0 }

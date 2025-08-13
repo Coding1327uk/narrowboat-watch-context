@@ -1,0 +1,39 @@
+{
+  "$id": "schemas/boats.schema.json",
+  "type": "object",
+  "required": [
+    "name",
+    "groupId"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "groupId": {
+      "type": "string"
+    },
+    "ownerIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lengthFt": {
+      "type": [
+        "number",
+        "integer"
+      ],
+      "minimum": 0
+    },
+    "notes": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

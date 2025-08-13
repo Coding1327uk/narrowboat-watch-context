@@ -1,0 +1,27 @@
+{
+  "$id": "schemas/users_roles.schema.json",
+  "type": "object",
+  "required": [
+    "roles"
+  ],
+  "properties": {
+    "displayName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

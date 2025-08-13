@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: Narrowboat Watch Mobile API
+  version: 0.2.0
+paths:
+  /me:
+    get:
+      summary: Get current user, roles, and scoped groups/boats
+      responses:
+        '200':
+          description: OK
+  /boats:
+    get:
+      summary: List boats accessible to the user (by group scope)
+      parameters:
+        - in: query
+          name: groupId
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+  /boats/{boatId}:
+    get:
+      summary: Get boat by ID
+      parameters:
+        - in: path
+          name: boatId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK
+  /boats/{boatId}/sensors:
+    get:
+      summary: List sensors for a boat
+      parameters:
+        - in: path
+          name: boatId
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: OK

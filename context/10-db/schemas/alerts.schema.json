@@ -1,0 +1,38 @@
+{
+  "$id": "schemas/alerts.schema.json",
+  "type": "object",
+  "required": [
+    "name",
+    "condition",
+    "enabled"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "condition": {
+      "type": "object"
+    },
+    "channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

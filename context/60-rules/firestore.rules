@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function hasRole(role) {
+      return request.auth != null && (role in request.auth.token.roles);
+    }
+    match /groups/{groupId} {
+      allow read: if hasRole('Watchkeeper') || hasRole('GroupAdmin') || hasRole('SuperUser');
+      allow write: if hasRole('GroupAdmin') || hasRole('SuperUser');
+    }
+    match /boats/{boatId} {
+      allow read: if hasRole('Watchkeeper') || hasRole('GroupAdmin') || hasRole('SuperUser');
+      allow write: if hasRole('GroupAdmin') || hasRole('SuperUser');
+    }
+    match /sensors/{sensorId} {
+      allow read: if hasRole('Watchkeeper') || hasRole('GroupAdmin') || hasRole('SuperUser');
+      allow write: if hasRole('GroupAdmin') || hasRole('SuperUser');
+    }
+    match /alerts/{alertId} {
+      allow read: if hasRole('Watchkeeper') || hasRole('GroupAdmin') || hasRole('SuperUser');
+      allow write: if hasRole('GroupAdmin') || hasRole('SuperUser');
+    }
+  }
+}

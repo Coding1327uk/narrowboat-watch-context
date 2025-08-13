@@ -1,0 +1,45 @@
+{
+  "$id": "schemas/sensors.schema.json",
+  "type": "object",
+  "required": [
+    "mac",
+    "type"
+  ],
+  "properties": {
+    "mac": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "tank",
+        "temp",
+        "door",
+        "voltage",
+        "custom"
+      ]
+    },
+    "boatId": {
+      "type": "string"
+    },
+    "dataFields": {
+      "type": "object"
+    },
+    "lastSeen": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
